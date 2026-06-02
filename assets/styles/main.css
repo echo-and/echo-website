@@ -22,6 +22,12 @@ html {
 
 body {
     background-color: var(--color-bg);
+    color: var(--color-text-base);
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
 }
 
 .site-nav {
@@ -60,12 +66,28 @@ body {
     position: relative;
     padding: 40px 0;
     overflow: hidden;
+    h1,
+    .hero-badges,
+    .cta-group {
+        position: relative;
+        z-index: 1;
+    }
     h1 {
         font-size: 40px;
         font-weight: bold;
         text-align: center;
+        line-height: 1.15;
+    }
+    .hero-badges {
+        flex-wrap: wrap;
+        padding-inline: 24px;
+    }
+    .hero-badges li {
+        align-items: center;
     }
     .screen {
+        position: relative;
+        z-index: 1;
         margin-bottom: -10px;
         border-radius: 6px;
         overflow: hidden;
@@ -88,6 +110,9 @@ body {
 }
 
 a.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     padding: 10px 24px;
     background: linear-gradient(
         180deg,
@@ -129,16 +154,28 @@ a.button {
         font-size: 20px;
         font-weight: bold;
         color: var(--color-text-base);
+        line-height: 1.3;
     }
     p {
         color: var(--color-text-secondary);
+        line-height: 1.6;
+    }
+    .feature-item {
+        gap: 64px;
+    }
+    .feature-copy {
+        flex: 0 1 400px;
     }
     .pic {
+        flex: 0 0 480px;
+        aspect-ratio: 5 / 3;
         position: relative;
         background: var(--color-bg-gray);
         border-radius: 12px;
         overflow: hidden;
         img {
+            width: 520px;
+            max-width: none;
             position: absolute;
             top: 10%;
         }
@@ -157,6 +194,7 @@ a.button {
         font-weight: bold;
         text-align: center;
         color: var(--color-text-muted);
+        line-height: 1.4;
     }
 }
 
@@ -174,5 +212,223 @@ a.button {
         text-align: center;
         font-size: 14px;
         color: var(--color-text-muted);
+    }
+}
+
+@media (max-width: 1023px) {
+    .site-nav {
+        padding-inline: 40px;
+    }
+
+    .hero {
+        height: auto;
+        min-height: 620px;
+        padding: 48px 24px 0;
+        .screen {
+            width: min(100%, 672px);
+        }
+    }
+
+    .title,
+    .features,
+    .bottom-cta {
+        padding-inline: 32px;
+    }
+
+    .features {
+        .feature-item {
+            width: min(100%, 896px);
+            gap: 40px;
+        }
+        .feature-copy {
+            flex-basis: 340px;
+        }
+        .feature-copy p {
+            width: auto;
+        }
+        .pic {
+            width: auto;
+            flex-basis: min(46vw, 420px);
+            height: auto;
+        }
+        .pic img {
+            width: 500px;
+        }
+        .pic img.right-24 {
+            right: 32px;
+        }
+        .pic img.left-24 {
+            left: 32px;
+        }
+    }
+
+    .site-footer {
+        padding-inline: 32px;
+        .footer-links {
+            gap: 64px;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .site-nav {
+        height: 64px;
+        padding-inline: 24px;
+        .menu,
+        .action li:first-child {
+            display: none;
+        }
+        .action {
+            gap: 0;
+        }
+        .brand > a {
+            width: 34px;
+        }
+    }
+
+    .hero {
+        min-height: 0;
+        padding: 36px 20px 0;
+        h1 {
+            max-width: 520px;
+            margin-inline: auto;
+            font-size: 32px;
+        }
+        .hero-badges {
+            gap: 12px 24px;
+            padding: 18px 0 12px;
+        }
+        .screen {
+            margin-top: 28px;
+            box-shadow: 0px -4px 56px rgba(0, 0, 0, 0.1);
+        }
+        &::after {
+            height: 120px;
+        }
+    }
+
+    .title {
+        margin-top: 36px;
+        padding-inline: 24px;
+        .slogan {
+            font-size: 22px;
+            line-height: 1.35;
+        }
+    }
+
+    .features {
+        margin-top: 44px;
+        padding-inline: 24px;
+        .title {
+            font-size: 22px;
+        }
+        .feature-item,
+        .feature-item.flex-row-reverse {
+            width: 100%;
+            flex-direction: column;
+            align-items: stretch;
+            gap: 20px;
+            margin-top: 48px;
+        }
+        .feature-copy {
+            flex: none;
+        }
+        .feature-copy p {
+            width: auto;
+        }
+        .pic {
+            flex: none;
+            width: 100%;
+            height: auto;
+            aspect-ratio: 5 / 3;
+        }
+        .pic img {
+            width: 116%;
+            top: 11%;
+        }
+        .pic img.right-24 {
+            right: -18%;
+        }
+        .pic img.left-24 {
+            left: -18%;
+        }
+    }
+
+    .bottom-cta {
+        padding: 48px 24px;
+        h3 {
+            max-width: 420px;
+            margin-inline: auto;
+            font-size: 18px;
+        }
+    }
+
+    .site-footer {
+        padding: 32px 24px;
+        .footer-links {
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            gap: 32px 56px;
+        }
+        .footer-links > div {
+            min-width: 120px;
+        }
+        .copyright {
+            margin-top: 40px;
+        }
+    }
+}
+
+@media (max-width: 479px) {
+    .site-nav {
+        padding-inline: 18px;
+    }
+
+    .hero {
+        padding-inline: 18px;
+        h1 {
+            font-size: 29px;
+        }
+        .hero-badges {
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        .hero-badges h2 {
+            white-space: normal;
+        }
+        .cta-group {
+            gap: 12px;
+        }
+    }
+
+    a.button {
+        min-width: 132px;
+        padding-inline: 18px;
+    }
+
+    .title,
+    .features,
+    .bottom-cta {
+        padding-inline: 18px;
+    }
+
+    .features {
+        .feature-item,
+        .feature-item.flex-row-reverse {
+            margin-top: 40px;
+        }
+        .pic {
+            border-radius: 10px;
+        }
+    }
+
+    .site-footer {
+        padding-inline: 18px;
+        .footer-links {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 28px 32px;
+        }
     }
 }

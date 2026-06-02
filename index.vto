@@ -4,13 +4,13 @@ layout: layout.vto
 
 <section class="hero mx-auto h-2xl">
   <h1>Lightweight, blazing-fast GUI for Docker</h1>
-  <ul class="flex py-4 gap-12 justify-center">
+  <ul class="hero-badges flex py-4 gap-12 justify-center">
     <li class="flex gap-2"><img src="/assets/images/laptop.svg" alt=""><h2 class="whitespace-nowrap">Native & Cross-Platform</h2></li>
     <li class="flex gap-2"><img src="/assets/images/design.svg" alt=""><h2 class="whitespace-nowrap">Thoughtfully Designed</h2></li>
     <li class="flex gap-2"><img src="/assets/images/rust.svg" alt=""><h2 class="whitespace-nowrap">Rust-Powered</h2></li>
   </ul>
-  <div class="flex py-4 justify-center gap-4"><a href="/docs" class="button secondary">Learn more</a><a href="/download" class="button">Download</a></div>
-  <div class="screen max-w-2xl mx-auto mt-10" data-tilt data-tilt-scale="1.05"><img src="/assets/images/screen.png" alt=""></div>
+  <div class="cta-group flex py-4 justify-center gap-4"><a href="/docs" class="button secondary">Learn more</a><a href="/download" class="button">Download</a></div>
+  <div class="screen max-w-2xl mx-auto mt-10" data-tilt data-tilt-scale="1.05"><img src="/assets/images/screen.png" alt="Echo app dashboard"></div>
 </section>
 
 <section class="title container mx-auto mt-12 max-w-prose">
@@ -19,8 +19,8 @@ layout: layout.vto
 
 <section class="features container mx-auto mt-12 ">
   <h2 class="title">Features you’ve always wanted.</h2>
-  <div class="flex items-center justify-between w-240 mx-auto mt-20">
-      <div>
+  <div class="feature-item flex items-center justify-between w-240 mx-auto mt-20">
+      <div class="feature-copy">
           <h3>Real-Time Container Insights</h3>
           <p class="w-100 mt-2">
               Monitor live CPU, memory, and I/O metrics at a glance. Manage your
@@ -28,45 +28,45 @@ layout: layout.vto
               interactive shell.
           </p>
       </div>
-      <div class="pic w-120 h-72"><img class="right-24" src="/assets/images/screen1.png" alt="" data-tilt></div>
+      <div class="pic w-120 h-72"><img class="right-24" src="/assets/images/screen1.png" alt="Container metrics in Echo" loading="lazy" data-tilt></div>
   </div>
-  <div class="flex flex-row-reverse items-center justify-between w-240 mx-auto mt-20">
-      <div>
+  <div class="feature-item flex flex-row-reverse items-center justify-between w-240 mx-auto mt-20">
+      <div class="feature-copy">
           <h3>Declutter Your Image Registry</h3>
           <p class="w-100 mt-2">
               Keep your local storage clean. Easily filter active versus unused images, track file sizes, and import new builds without touching the terminal.
           </p>
       </div>
-      <div class="pic w-120 h-72"><img class="left-24" src="/assets/images/screen2.png" alt="" data-tilt></div>
+      <div class="pic w-120 h-72"><img class="left-24" src="/assets/images/screen2.png" alt="Image registry management in Echo" loading="lazy" data-tilt></div>
   </div>
-  <div class="flex items-center justify-between w-240 mx-auto mt-20">
-      <div>
+  <div class="feature-item flex items-center justify-between w-240 mx-auto mt-20">
+      <div class="feature-copy">
           <h3>Effortless Volume Management</h3>
           <p class="w-100 mt-2">
               Take full control of your persistent data. Inspect and organize Docker volumes with zero friction to keep your databases and logs accounted for.
           </p>
       </div>
-      <div class="pic w-120 h-72"><img class="right-24" src="/assets/images/screen3.png" alt="" data-tilt></div>
+      <div class="pic w-120 h-72"><img class="right-24" src="/assets/images/screen3.png" alt="Docker volume management in Echo" loading="lazy" data-tilt></div>
   </div>
-  <div class="flex flex-row-reverse items-center justify-between w-240 mx-auto mt-20">
-      <div>
+  <div class="feature-item flex flex-row-reverse items-center justify-between w-240 mx-auto mt-20">
+      <div class="feature-copy">
           <h3>Visual Network Topology</h3>
           <p class="w-100 mt-2">
               Stop guessing container connections. Map out bridges, subnets, and IP routing instantly through an intuitive visual layout with live I/O tracking.
           </p>
       </div>
-      <div class="pic w-120 h-72"><img class="left-24" src="/assets/images/screen4.png" alt="" data-tilt></div>
+      <div class="pic w-120 h-72"><img class="left-24" src="/assets/images/screen4.png" alt="Network topology view in Echo" loading="lazy" data-tilt></div>
   </div>
 </section>
 
 <section class="bottom-cta container py-12 mx-auto">
     <h2>Try Echo Now.</h2>
     <h3>Purely Native. No Browser Overhead. Light on CPU & RAM.</h3>
-    <div class="flex py-4 justify-center gap-4"><a href="/docs" class="button secondary">Learn more</a><a href="/download" class="button">Download</a></div>
+    <div class="cta-group flex py-4 justify-center gap-4"><a href="/docs" class="button secondary">Learn more</a><a href="/download" class="button">Download</a></div>
 </section>
 
 <footer class="site-footer py-8 mx-auto">
-    <div class="flex justify-center gap-24">
+    <div class="footer-links flex justify-center gap-24">
         <div>
             <h4>Resource</h4>
             <ul>
