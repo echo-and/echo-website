@@ -1,0 +1,14 @@
+title: Echo - Lightweight, blazing-fast GUI for Docker
+
+nav:
+  menu:
+    - title: Docs
+      url: /docs
+    - title: Blog
+      url: /blog
+    - title: Pricing
+      url: /pricing
+
+metas:
+  site: Echo - Lightweight, blazing-fast GUI for Docker
+  description: Lightweight, blazing-fast GUI for Docker
