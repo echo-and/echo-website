@@ -30,6 +30,9 @@ site.use(minify_html());
 
 site.add([".svg", ".png"]);
 site.add("/assets/styles/main.css");
-site.add("npm:vanilla-tilt", "/assets/js/dist/vanilla-tilt.min.js");
+site.add(
+  "npm:vanilla-tilt@^1.8.1/dist/vanilla-tilt.min.js",
+  "/assets/js/dist/vanilla-tilt.min.js",
+);
 
 export default site;
