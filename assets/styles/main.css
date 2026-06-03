@@ -95,6 +95,7 @@ img {
     }
     &::after {
         position: absolute;
+        z-index: 10;
         bottom: 0;
         left: 0;
         content: "";
@@ -229,6 +230,351 @@ a.button {
     }
 }
 
+.pricing {
+    scroll-margin-top: 96px;
+    .pricing-header {
+        text-align: center;
+    }
+    .pricing-header h2 {
+        font-size: 24px;
+        font-weight: bold;
+        color: var(--color-text-base);
+        line-height: 1.3;
+    }
+    .pricing-header p {
+        margin-top: 12px;
+        color: var(--color-text-secondary);
+        line-height: 1.6;
+    }
+    .pricing-grid {
+        width: min(100%, 960px);
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+    }
+    .pricing-card {
+        min-height: 420px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 28px;
+        padding: 28px;
+        background: linear-gradient(180deg, #ffffff 0%, #f8f8f8 100%);
+        border: 1px solid rgba(0, 0, 0, 0.08);
+        border-radius: 12px;
+        box-shadow: 0 16px 48px rgba(0, 0, 0, 0.06);
+    }
+    .pricing-card.featured {
+        background: linear-gradient(180deg, #2f3030 0%, #414141 100%);
+        color: white;
+        box-shadow:
+            inset 0px 0px 2px 1px rgba(255, 255, 255, 0.16),
+            0 20px 56px rgba(0, 0, 0, 0.12);
+    }
+    .pricing-kicker {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        font-size: 14px;
+        font-weight: 700;
+        color: var(--color-text-secondary);
+        text-transform: uppercase;
+        letter-spacing: 0;
+    }
+    .pricing-kicker span {
+        padding: 5px 10px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.14);
+        color: rgba(255, 255, 255, 0.88);
+        font-size: 12px;
+        text-transform: none;
+        white-space: nowrap;
+    }
+    .pricing-card h3 {
+        margin-top: 14px;
+        font-size: 36px;
+        font-weight: 800;
+        line-height: 1.1;
+        color: var(--color-text-base);
+    }
+    .pricing-summary {
+        margin-top: 12px;
+        color: var(--color-text-secondary);
+        line-height: 1.6;
+    }
+    .pricing-card ul {
+        display: grid;
+        gap: 12px;
+    }
+    .pricing-card li {
+        position: relative;
+        padding-left: 22px;
+        color: var(--color-text-secondary);
+        line-height: 1.5;
+    }
+    .pricing-card li::before {
+        position: absolute;
+        top: 0.68em;
+        left: 0;
+        width: 8px;
+        height: 8px;
+        content: "";
+        border-radius: 999px;
+        background: var(--color-text-base);
+        transform: translateY(-50%);
+    }
+    .pricing-card .button {
+        width: 100%;
+    }
+    .pricing-card.featured .pricing-kicker,
+    .pricing-card.featured h3,
+    .pricing-card.featured .pricing-summary,
+    .pricing-card.featured li {
+        color: rgba(255, 255, 255, 0.86);
+    }
+    .pricing-card.featured h3 {
+        color: white;
+    }
+    .pricing-card.featured li::before {
+        background: white;
+    }
+    .pricing-card.featured .button.disabled {
+        cursor: default;
+        color: rgba(255, 255, 255, 0.76);
+        background: rgba(255, 255, 255, 0.1);
+        box-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.18);
+        pointer-events: none;
+    }
+}
+
+.docs-page,
+.article-page {
+    padding: 56px 64px 80px;
+}
+
+.docs-page {
+    display: grid;
+    grid-template-columns: 220px minmax(0, 1fr) 180px;
+    gap: 40px;
+    align-items: start;
+}
+
+.docs-sidebar,
+.docs-toc {
+    position: sticky;
+    top: 24px;
+    align-self: start;
+}
+
+.docs-sidebar {
+    padding-right: 24px;
+}
+
+.docs-toc {
+    padding-left: 24px;
+}
+
+.docs-sidebar::after,
+.docs-toc::before {
+    position: absolute;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    content: "";
+    background: linear-gradient(
+        180deg,
+        hsl(0 0 89 / 0.05) 0%,
+        hsl(0 0 82 / 0.9) 50%,
+        hsl(0 0 89 / 0.05) 100%
+    );
+}
+
+.docs-sidebar::after {
+    right: 0;
+}
+
+.docs-toc::before {
+    left: 0;
+}
+
+.docs-sidebar-inner,
+.docs-toc-inner {
+    padding: 4px 0;
+}
+
+.docs-label {
+    margin-bottom: 12px;
+    color: var(--color-text-muted);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0;
+    text-transform: uppercase;
+}
+
+.docs-sidebar ul,
+.docs-toc ul {
+    display: grid;
+    gap: 4px;
+}
+
+.docs-sidebar a,
+.docs-toc a {
+    display: block;
+    border-radius: 8px;
+    color: var(--color-text-secondary);
+    line-height: 1.35;
+    text-decoration: none;
+}
+
+.docs-sidebar a {
+    padding: 9px 10px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.docs-sidebar a:hover,
+.docs-sidebar a.active {
+    color: var(--color-text-base);
+}
+
+.docs-toc a {
+    padding: 6px 0;
+    font-size: 13px;
+}
+
+.docs-toc a:hover {
+    color: var(--color-text-base);
+}
+
+.docs-content,
+.article-content {
+    width: min(100%, 760px);
+}
+
+.article-content {
+    margin-inline: auto;
+}
+
+.markdown-content {
+    h1 {
+        margin-bottom: 18px;
+        color: var(--color-text-base);
+        font-size: 32px;
+        font-weight: 800;
+        line-height: 1.16;
+    }
+    h2 {
+        margin-top: 40px;
+        margin-bottom: 10px;
+        scroll-margin-top: 96px;
+        color: var(--color-text-base);
+        font-size: 20px;
+        font-weight: 800;
+        line-height: 1.25;
+    }
+    h3 {
+        margin-top: 24px;
+        margin-bottom: 10px;
+        color: var(--color-text-base);
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.3;
+    }
+    p {
+        color: var(--color-text-secondary);
+        line-height: 1.75;
+    }
+    p + p,
+    ul + p,
+    ol + p,
+    pre + p {
+        margin-top: 16px;
+    }
+    a {
+        color: var(--color-text-base);
+        font-weight: 600;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+    }
+    ul,
+    ol {
+        margin-top: 14px;
+        display: grid;
+        gap: 10px;
+        color: var(--color-text-secondary);
+        line-height: 1.65;
+    }
+    li {
+        position: relative;
+        padding-left: 22px;
+    }
+    ul li::before {
+        position: absolute;
+        top: 0.74em;
+        left: 2px;
+        width: 7px;
+        height: 7px;
+        content: "";
+        border-radius: 999px;
+        background: var(--color-text-muted);
+        transform: translateY(-50%);
+    }
+    ol {
+        counter-reset: markdown-steps;
+    }
+    ol li {
+        counter-increment: markdown-steps;
+    }
+    ol li::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: counter(markdown-steps) ".";
+        color: var(--color-text-base);
+        font-weight: 700;
+    }
+    strong {
+        color: var(--color-text-base);
+        font-weight: 700;
+    }
+    code {
+        padding: 2px 6px;
+        border: 1px solid rgba(0, 0, 0, 0.08);
+        border-radius: 6px;
+        background: var(--color-bg-gray);
+        color: var(--color-text-base);
+        font-family: var(--font-code);
+        font-size: 0.92em;
+    }
+    pre {
+        margin-top: 16px;
+        padding: 16px;
+        border: 1px solid rgba(0, 0, 0, 0.08);
+        border-radius: 12px;
+        background: #2f3030;
+        overflow-x: auto;
+    }
+    pre code {
+        padding: 0;
+        border: 0;
+        background: transparent;
+        color: rgba(255, 255, 255, 0.9);
+    }
+}
+
+.article-page {
+    .markdown-content {
+        h2 {
+            padding-top: 28px;
+            border-top: 1px solid rgba(0, 0, 0, 0.08);
+        }
+        h2:first-of-type {
+            margin-top: 36px;
+        }
+    }
+}
+
 .bottom-cta {
     h2 {
         font-size: 24px;
@@ -278,6 +624,9 @@ a.button {
 
     .title,
     .features,
+    .pricing,
+    .docs-page,
+    .article-page,
     .bottom-cta {
         padding-inline: 32px;
     }
@@ -307,6 +656,21 @@ a.button {
         .pic img.left-24 {
             left: 32px;
         }
+    }
+
+    .pricing {
+        .pricing-grid {
+            width: min(100%, 896px);
+        }
+    }
+
+    .docs-page {
+        grid-template-columns: 200px minmax(0, 1fr);
+        gap: 32px;
+    }
+
+    .docs-toc {
+        display: none;
     }
 
     .site-footer {
@@ -401,6 +765,82 @@ a.button {
         }
     }
 
+    .pricing {
+        margin-top: 56px;
+        padding-inline: 24px;
+        scroll-margin-top: 80px;
+        .pricing-header h2 {
+            font-size: 22px;
+        }
+        .pricing-grid {
+            grid-template-columns: 1fr;
+            gap: 18px;
+        }
+        .pricing-card {
+            min-height: 0;
+            padding: 24px;
+        }
+        .pricing-card h3 {
+            font-size: 32px;
+        }
+    }
+
+    .docs-page,
+    .article-page {
+        padding: 40px 24px 64px;
+    }
+
+    .docs-page {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .docs-sidebar {
+        position: static;
+        padding-right: 0;
+        padding-bottom: 22px;
+    }
+
+    .docs-sidebar::after {
+        top: auto;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: linear-gradient(
+            90deg,
+            hsl(0 0 89 / 0.05) 0%,
+            hsl(0 0 82 / 0.9) 50%,
+            hsl(0 0 89 / 0.05) 100%
+        );
+    }
+
+    .docs-sidebar-inner {
+        padding: 0;
+    }
+
+    .docs-sidebar ul {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 6px;
+    }
+
+    .docs-content,
+    .article-content {
+        width: 100%;
+    }
+
+    .markdown-content {
+        h1 {
+            font-size: 28px;
+        }
+        h2 {
+            margin-top: 34px;
+            font-size: 19px;
+            scroll-margin-top: 80px;
+        }
+    }
+
     .bottom-cta {
         padding: 48px 24px;
         h3 {
@@ -456,6 +896,9 @@ a.button {
 
     .title,
     .features,
+    .pricing,
+    .docs-page,
+    .article-page,
     .bottom-cta {
         padding-inline: 18px;
     }
@@ -466,6 +909,29 @@ a.button {
             margin-top: 40px;
         }
         .pic {
+            border-radius: 10px;
+        }
+    }
+
+    .docs-page,
+    .article-page {
+        padding-top: 32px;
+        padding-bottom: 56px;
+    }
+
+    .docs-sidebar ul {
+        grid-template-columns: 1fr;
+    }
+
+    .docs-sidebar a {
+        padding-block: 10px;
+    }
+
+    .markdown-content {
+        h1 {
+            font-size: 26px;
+        }
+        pre {
             border-radius: 10px;
         }
     }

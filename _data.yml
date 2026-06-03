@@ -4,10 +4,31 @@ nav:
   menu:
     - title: Docs
       url: /docs
-    - title: Blog
-      url: /blog
+    - title: Changelog
+      url: /changelog
     - title: Pricing
-      url: /pricing
+      url: /#pricing
+
+docs:
+  menu:
+    - id: overview
+      title: Overview
+      url: /docs/
+    - id: getting-started
+      title: Getting Started
+      url: /docs/getting-started/
+    - id: using-echo
+      title: Using Echo
+      url: /docs/using-echo/
+    - id: preferences
+      title: Preferences
+      url: /docs/preferences/
+    - id: troubleshooting
+      title: Troubleshooting
+      url: /docs/troubleshooting/
+    - id: roadmap
+      title: Roadmap
+      url: /docs/roadmap/
 
 metas:
   site: Echo - Lightweight, blazing-fast GUI for Docker

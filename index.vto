@@ -59,10 +59,47 @@ layout: layout.vto
   </div>
 </section>
 
+<section id="pricing" class="pricing container mx-auto mt-20">
+  <div class="pricing-header mx-auto max-w-prose">
+    <h2>Pricing that stays out of your way.</h2>
+    <p>Echo is free for personal and commercial use. Pro is planned for teams and advanced workflows that need more than local Docker management.</p>
+  </div>
+  <div class="pricing-grid mx-auto mt-12">
+    <article class="pricing-card">
+      <div>
+        <p class="pricing-kicker">Free</p>
+        <h3>$0</h3>
+        <p class="pricing-summary">For individual developers, indie projects, and commercial work.</p>
+      </div>
+      <ul>
+        <li>Personal use included</li>
+        <li>Commercial use included</li>
+        <li>Local container, image, volume, and network management</li>
+        <li>Live metrics, logs, and shell workflows</li>
+      </ul>
+      <a href="/download" class="button secondary">Download Free</a>
+    </article>
+    <article class="pricing-card featured">
+      <div>
+        <p class="pricing-kicker">Pro <span>Coming Soon</span></p>
+        <h3>Coming Soon</h3>
+        <p class="pricing-summary">For remote infrastructure, safer experiments, and more advanced Docker workflows.</p>
+      </div>
+      <ul>
+        <li>Remote Docker host management</li>
+        <li>Sandbox workflows without a Docker backend</li>
+        <li>Advanced profiles for repeatable environments</li>
+        <li>Workflow tools for teams and power users</li>
+      </ul>
+      <a href="#pricing" class="button secondary disabled" aria-disabled="true" tabindex="-1">Stay Tuned</a>
+    </article>
+  </div>
+</section>
+
 <section class="bottom-cta container py-12 mx-auto">
     <h2>Try Echo Now.</h2>
     <h3>Purely Native. No Browser Overhead. Light on CPU & RAM.</h3>
-    <div class="cta-group flex py-4 justify-center gap-4"><a href="/docs" class="button secondary">Learn more</a><a href="/download" class="button">Download</a></div>
+    <div class="cta-group flex py-4 justify-center gap-4"><a href="/docs" class="button secondary">Learn more</a><a href="https://github.com/echo-and/echo/releases" class="button">Download</a></div>
 </section>
 
 <footer class="site-footer py-8 mx-auto">
@@ -70,9 +107,9 @@ layout: layout.vto
         <div>
             <h4>Resource</h4>
             <ul>
-                <li><a href="#">Documents</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Github</a></li>
+                <li><a href="/docs">Documents</a></li>
+                <li><a href="/changlog">Changelog</a></li>
+                <li><a href="https://github.com/echo-and/echo">Github</a></li>
             </ul>
         </div>
         <div>

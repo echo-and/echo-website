@@ -1,0 +1,37 @@
+---
+layout: layout.vto
+---
+
+<main class="docs-page container mx-auto">
+  <aside class="docs-sidebar" aria-label="Documentation">
+    <div class="docs-sidebar-inner">
+      <p class="docs-label">Documentation</p>
+      <nav>
+        <ul>
+          {{ for item of docs.menu }}
+            <li>
+              <a href="{{ item.url }}" {{ if item.id === doc_id }}class="active" aria-current="page"{{ /if }}>{{ item.title }}</a>
+            </li>
+          {{ /for }}
+        </ul>
+      </nav>
+    </div>
+  </aside>
+
+  <article class="docs-content markdown-content">
+    {{ content }}
+  </article>
+
+  <aside class="docs-toc" aria-label="On this page">
+    <div class="docs-toc-inner">
+      <p class="docs-label">On this page</p>
+      <nav>
+        <ul>
+          {{ for item of toc }}
+            <li><a href="{{ item.href }}">{{ item.title }}</a></li>
+          {{ /for }}
+        </ul>
+      </nav>
+    </div>
+  </aside>
+</main>
