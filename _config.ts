@@ -28,6 +28,7 @@ site.use(sitemap());
 site.use(seo());
 site.use(minify_html());
 
+site.ignore("README.md");
 site.add([".svg", ".png"]);
 site.add("/assets/styles/main.css");
 site.add(
